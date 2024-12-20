@@ -1,9 +1,18 @@
 #include <Hazel.h>
 
-
-int main()
+class SandBox : public Hazel::Application
 {
-	Hazel::Applicaiton app;
-	app.run();
-	return 0;
+public:
+	SandBox()
+	{
+	}
+
+	~SandBox()
+	{
+	}
+};
+
+Hazel::Application* Hazel::createApplication()
+{
+	return new SandBox();
 }
